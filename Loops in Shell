@@ -1,0 +1,171 @@
+Loop Type	                                 Use Case
+for	                                        Iterating over items or sequences
+while                                     	Run while a condition is true
+until	                                      Run until a condition becomes true
+select                                    	Create simple user-selectable menus
+
+ 1. for Loop
+bash
+Copy
+Edit
+for i in 1 2 3 4 5
+do
+  echo $i
+done
+Explanation:
+
+Iterates over a list of values: 1 2 3 4 5.
+
+Each value is assigned to variable i in every loop cycle.
+
+echo $i prints the current value.
+
+✅ Output:
+
+Copy
+Edit
+1
+2
+3
+4
+5
+🔹 2. while Loop
+bash
+Copy
+Edit
+i=1
+while [ $i -le 5 ]
+do
+  echo $i
+  ((i++))
+done
+Explanation:
+
+Initializes i to 1.
+
+Runs as long as $i is less than or equal to 5.
+
+Inside the loop, it prints i and then increments it.
+
+✅ Output:
+
+Copy
+Edit
+1
+2
+3
+4
+5
+🔹 3. until Loop
+bash
+Copy
+Edit
+i=1
+until [ $i -gt 5 ]
+do
+  echo $i
+  ((i++))
+done
+Explanation:
+
+Starts with i = 1.
+
+Runs the loop until the condition becomes true.
+
+Here, it continues until $i becomes greater than 5.
+
+✅ Output (same as above):
+
+Copy
+Edit
+1
+2
+3
+4
+5
+🔍 Summary Table
+Loop Type	Condition Check	Runs While...	Common Use
+for	Over list	List has values	Known range/list
+while	Top of loop	Condition is true	Unknown end
+until	Top of loop	Condition is false	Run until a condition is true
+
+Let me know if you'd like:
+
+A version using C-style for (( i=1; i<=5; i++ )) syntax
+
+Nested loops
+
+Loop with arrays or files
+
+Happy scripting! 🐚
+
+
+
+
+
+
+
+
+You said:
+how many loops are use in shell script
+
+
+In shell scripting (like Bash), there are 4 main types of loops that are commonly used. 
+
+ 1. for Loop
+Used to iterate over a list of items (numbers, strings, output of commands, etc.).
+
+Syntax 1 – Word list:
+
+for item in 1 2 3; do
+  echo $item
+done
+
+Syntax 2 – C-style:
+
+for (( i=0; i<5; i++ )); do
+  echo $i
+done
+
+
+2. while Loop
+Executes commands as long as the condition is true.
+
+i=1
+while [ $i -le 5 ]; do
+  echo $i
+  ((i++))
+done
+
+3. until Loop
+Executes commands until the condition becomes true.
+
+i=1
+until [ $i -gt 5 ]; do
+  echo $i
+  ((i++))
+done
+
+
+ 4. select Loop (less common)
+Used for creating menus in scripts. Great for user interaction.
+
+select option in Start Stop Exit; do
+  case $option in
+    Start) echo "Starting...";;
+    Stop) echo "Stopping...";;
+    Exit) break;;
+    *) echo "Invalid option";;
+  esac
+done
+
+
+✅ Summary Table
+Loop Type	Use Case
+for	Iterating over items or sequences
+while	Run while a condition is true
+until	Run until a condition becomes true
+select	Create simple user-selectable menus
+
+
+
