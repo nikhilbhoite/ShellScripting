@@ -1,4 +1,4 @@
- INTEGER COMPARISON OPERATORS
+### INTEGER COMPARISON OPERATORS
 Operator	       Meaning	                        Example
 -eq             	Equal                         	[ $a -eq $b ]
 -ne	              Not equal                     	[ $a -ne $b ]
@@ -7,7 +7,7 @@ Operator	       Meaning	                        Example
 -ge	              Greater than or equal         	[ $a -ge $b ]
 -le	              Less than or equal            	[ $a -le $b ]
 
- STRING COMPARISON OPERATORS
+### STRING COMPARISON OPERATORS
 Operator	     Meaning	                          Example
 = or ==	       Strings are equal                   [ "$a" == "$b" ]
 !=	           Strings are not equal	             [ "$a" != "$b" ]
@@ -18,7 +18,7 @@ Operator	     Meaning	                          Example
 
 IMPORTANT: For < and >, use backslashes (\) to escape them in [ ].
 
- FILE TEST OPERATORS
+### FILE TEST OPERATORS
 Operator	                     Test                                          	Example
 -e	                         File exists	                                    [ -e file.txt ]
 -f	                         File exists and is a regular file	              [ -f file.txt ]
@@ -34,11 +34,12 @@ file1 -nt file2	             File1 is newer than file2	                      [ f
 file1 -ot file2	             File1 is older than file2	                      [ file1 -ot file2 ]
 file1 -ef file2	             File1 and file2 refer to same file               [ file1 -ef file2 ]
 
-LOGICAL OPERATORS (Inside [[ ... ]] or (( ... )))
-Operator	                   Meaning                   	      Example
-&&	                         AND	                       [[ $a -gt 0 && $b -gt 0 ]]
-`		                                                              `
-!	                            NOT	                       [[ ! -f file.txt ]]
+### LOGICAL OPERATORS (Inside [[ ... ]] or (( ... )))
+Operator	            Meaning	            Works In	                                   Example
+&&	                Logical AND      	[[ ... ]], (( ... ))	            [[ $a -gt 0 && $b -gt 0 ]] or (( a > 0 && b > 0 ))
+`		                                           `	                         Logical OR
+!                 	Logical NOT         	[[ ... ]]	                    [[ ! -f file.txt ]] – True if file does not exist
+
 
  BONUS: (( ... )) for Arithmetic Comparison
 You can use C-style syntax for integer comparisons:
