@@ -1,0 +1,20 @@
+Shell Scripting: From Basics to Advanced (Complete 
+Notes)
+ 1. What is a Shell?
+ •
+ A Shell is a program that acts as an interface between the user and the operating system.
+ •
+ It interprets the commands entered by the user and executes them.
+ Types of Shells:
+ Shell
+ sh
+ bash
+ zsh
+ ksh
+ csh
+ Description
+ Bourne Shell (original UNIX shell)
+ Bourne Again Shell (most common)
+ Z Shell (feature-rich)
+ Korn Shell
+ C Shell (C-like syntax)
