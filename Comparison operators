@@ -1,0 +1,51 @@
+ INTEGER COMPARISON OPERATORS
+Operator	       Meaning	                        Example
+-eq             	Equal                         	[ $a -eq $b ]
+-ne	              Not equal                     	[ $a -ne $b ]
+-gt	              Greater than	                  [ $a -gt $b ]
+-lt             	Less than	                      [ $a -lt $b ]
+-ge	              Greater than or equal         	[ $a -ge $b ]
+-le	              Less than or equal            	[ $a -le $b ]
+
+ STRING COMPARISON OPERATORS
+Operator	     Meaning	                          Example
+= or ==	       Strings are equal                   [ "$a" == "$b" ]
+!=	           Strings are not equal	             [ "$a" != "$b" ]
+<	             String a comes before b (ASCII)     [ "$a" \< "$b" ]
+>              String a comes after b (ASCII)      [ "$a" \> "$b" ]
+-z	           String is empty	                   [ -z "$a" ]
+-n	           String is not empty	               [ -n "$a" ]
+
+IMPORTANT: For < and >, use backslashes (\) to escape them in [ ].
+
+ FILE TEST OPERATORS
+Operator	                     Test                                          	Example
+-e	                         File exists	                                    [ -e file.txt ]
+-f	                         File exists and is a regular file	              [ -f file.txt ]
+-d	                         File exists and is a directory	                  [ -d mydir ]
+-s	                         File exists and is not empty                    	[ -s file.txt ]
+-r                           File is readable	                                [ -r file.txt ]
+-w	                         File is writable	                                [ -w file.txt ]
+-x	                         File is executable                              	[ -x script.sh ]
+-L	                         File is a symbolic link                        	[ -L linkfile ]
+-c	                         File is a character device                     	[ -c /dev/ttyS0 ]
+-b	                         File is a block device	                          [ -b /dev/sda ]
+file1 -nt file2	             File1 is newer than file2	                      [ file1 -nt file2 ]
+file1 -ot file2	             File1 is older than file2	                      [ file1 -ot file2 ]
+file1 -ef file2	             File1 and file2 refer to same file               [ file1 -ef file2 ]
+
+LOGICAL OPERATORS (Inside [[ ... ]] or (( ... )))
+Operator	                   Meaning                   	      Example
+&&	                         AND	                       [[ $a -gt 0 && $b -gt 0 ]]
+`		                                                              `
+!	                            NOT	                       [[ ! -f file.txt ]]
+
+ BONUS: (( ... )) for Arithmetic Comparison
+You can use C-style syntax for integer comparisons:
+
+
+if (( a > b )); then
+  echo "a is greater"
+fi
+This avoids the need for -gt, -lt, etc.
+
