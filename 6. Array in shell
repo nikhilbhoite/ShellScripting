@@ -9,3 +9,20 @@
  do
  echo $item
  done
+
+
+10. Case Statement (Switch-like)
+ read -p "Enter a number: " num
+ case $num in
+ 1) echo "One";;
+ 2) echo "Two";;
+ *) echo "Unknown";;
+ esac
+
+11. Functions
+ greet() {
+ echo "Hello, $1"
+ }
+ greet "Ravi"
+ •
+ $1, $2 are positional parameters
