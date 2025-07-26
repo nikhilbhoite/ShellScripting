@@ -1,0 +1,11 @@
+9. Arrays in Shell
+ Define and Access
+ fruits=("apple" "banana" "cherry")
+ echo ${fruits[0]}   # apple
+ echo ${fruits[@]}   # all
+ echo ${#fruits[@]}  # count
+ Loop Through Array
+ for item in "${fruits[@]}"
+ do
+ echo $item
+ done
