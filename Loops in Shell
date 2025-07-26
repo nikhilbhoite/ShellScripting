@@ -5,9 +5,7 @@ until	                                      Run until a condition becomes true
 select                                    	Create simple user-selectable menus
 
  1. for Loop
-bash
-Copy
-Edit
+
 for i in 1 2 3 4 5
 do
   echo $i
@@ -22,17 +20,13 @@ echo $i prints the current value.
 
 ✅ Output:
 
-Copy
-Edit
 1
 2
 3
 4
 5
 🔹 2. while Loop
-bash
-Copy
-Edit
+
 i=1
 while [ $i -le 5 ]
 do
@@ -57,9 +51,7 @@ Edit
 4
 5
 🔹 3. until Loop
-bash
-Copy
-Edit
+
 i=1
 until [ $i -gt 5 ]
 do
@@ -83,7 +75,7 @@ Edit
 3
 4
 5
-🔍 Summary Table
+ Summary Table
 Loop Type	Condition Check	Runs While...	Common Use
 for	Over list	List has values	Known range/list
 while	Top of loop	Condition is true	Unknown end
@@ -101,13 +93,6 @@ Happy scripting! 🐚
 
 
 
-
-
-
-
-
-You said:
-how many loops are use in shell script
 
 
 In shell scripting (like Bash), there are 4 main types of loops that are commonly used. 
@@ -160,7 +145,7 @@ select option in Start Stop Exit; do
 done
 
 
-✅ Summary Table
+Summary Table
 Loop Type	Use Case
 for	Iterating over items or sequences
 while	Run while a condition is true
